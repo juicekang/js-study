@@ -1,0 +1,38 @@
+body{background: #111;position: relative;cursor: none;overflow: hidden;margin:0}
+.cursor{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background: url(img/target.png) no-repeat 0 0 / auto 100%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    
+}
+.cursor p{
+    position: absolute;
+    right:-20px;
+    bottom:-20px;
+    width: 200px;
+}
+.cursor::before{
+    content: "";
+    width:200vw;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    left:-100vw;
+    top:50%;
+    transform: translateY(-50%);
+}
+.cursor::after{
+    content: "";
+    height:200vh;
+    width: 1px;
+    background: #fff;
+    position: absolute;
+    left:50%;
+    top:-100vh;
+    transform: translateX(-50%);
+}

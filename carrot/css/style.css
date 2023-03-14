@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+* {margin:0;background: 0;border:0;box-sizing: border-box;}
+body{overflow: hidden;}
+button{cursor: pointer;transition:transform 0.3s}
+button:hover{transform: scale(1.1);}
+.wrap{width: 100%;height: 100vh;position: relative;background: url(../img/background.png) no-repeat 0 0 / cover;overflow: hidden;}
+.game-control{position: absolute; text-align: center;z-index: 2;left:50%;top:70px;transform: translateX(-50%);}
+.btn-play, .btn-replay{width:80px;height: 80px;border-radius: 15px;border:5px solid;background-color: antiquewhite;font-size: 3rem;line-height: 1;}
+.btn-replay img{vertical-align:middle;}
+.game-control .game-timer{width:230px;height:75px;border-radius: 15px;border:5px solid;background: #fff;font-size: 3rem;font-weight: bold;margin:15px 0}
+.game-control .catch-count{ width:100px;height: 100px;border-radius: 50%;border:5px solid ;background-color: darksalmon; color: #fff; font-size: 3rem; font-weight: bold;margin:0 auto;line-height: 90px;}
+.game-area{position: absolute;left:50%;bottom:5vh;width:95vw;height: 42vh;transform: translateX(-50%);}
+.carrot, .bug{position: absolute;background-size: 100% 100%; background-repeat: no-repeat;background-position: 0 0;cursor: pointer;transform: translate(-50%, -50%);transition: transform 0.3s;}
+.carrot {width:80px;height:80px; background-image: url(../img/carrot.png);}
+.carrot:hover{transform: translate(-50%, -50%) scale(1.2);}
+.bug {width:50px;height:50px;background-image: url(../img/bug.png);}
+.bug:hover{transform: translate(-50%, -50%) scale(1.2);}
+/* modal */
+.modal-game-end{display: none;position: absolute;background: rgba(0, 0, 0, 0.5);border-radius: 15px;bottom:25vh;left:50%;transform: translateX(-50%); z-index: 99;}
+.modal-game-end::before{content:"";width:200vw;height:200vh;position: absolute;left:-100vw;top:-100vh;z-index: 2;}
+.modal-body{position: relative;z-index:3; display: flex;flex-direction: column;justify-content: center;align-items: center;width:600px;height:300px;}
+.status{margin-top:30px;font-size: 3rem; font-weight: 700;color:#fff}
+
+/* @keyframes bugAni {
+    0% {transform: translate(-50%, -50%);}
+    50% {transform: translate(20%, 45%);}
+    75% {transform: translate(75%, 30%);}
+    100%{transform: translate(-50%, -50%);}
+} */

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll</title>
+    <style>
+      body{background: #000;}
+      .wrap{text-align: center;}
+      button{padding:10px 20px;font-size: 20px;font-weight: 700;background: palevioletred;color: #fff;border-radius: 5px;cursor: pointer;}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <button type="button" class="findBtn">Find a rabbit 🐰</button>
+      <div class="find-rabbit">
+        <p><img src="img/carrot.png" alt=""></p>
+        <p><img src="img/carrot.png" alt=""></p>
+        <p><img src="img/carrot.png" alt=""></p>
+        <p><img src="img/carrot.png" alt=""></p>
+        <p><img src="img/carrot.png" alt=""></p>
+        <p><img src="img/carrot.png" alt=""></p>
+        <p class="rabbit"><img src="img/rabbit.png" alt=""></p>
+        <p><img src="img/carrot.png" alt=""></p>
+        <p><img src="img/carrot.png" alt=""></p>
+        <p><img src="img/carrot.png" alt=""></p>
+        <p><img src="img/carrot.png" alt=""></p>
+        <p><img src="img/carrot.png" alt=""></p>
+        <p><img src="img/carrot.png" alt=""></p>
+      </div>
+    </div>
+    <script>
+      const rabbit = document.querySelector('.rabbit');
+      const findBtn = document.querySelector('.findBtn');
+
+      findBtn.addEventListener('click', e => {
+        rabbit.scrollIntoView({behavior:'smooth', block:'center'});
+        // window.scrollTo({top:rabbit.offsetTop - 300, left:0, behavior:'smooth'});
+      });
+    </script>
+  </body>
+</html>
