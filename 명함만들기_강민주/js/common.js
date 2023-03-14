@@ -4,25 +4,34 @@ fetch("./list.json")
 })
 .then((obj) => {
 
+    makeCard(obj);
     document.querySelector('form').addEventListener('submit', e => {
         e.preventDefault();
         let teamName = e.target.selectTeam.value;
-        let sortTeam = obj.filter( tg => tg["team"] === teamName);
-        makeCard(sortTeam);
+        let sortTeam = obj.filter( obj => obj["team"] === teamName);
+        if(teamName === ''){
+            return false;
+        } else {
+            makeCard(sortTeam);
+        }
     });
 
     document.addEventListener('click', e => {
         if(e.target.className === 'card'){
             //console.log(obj);
             let targetName = e.target.innerHTML;
-            let profile = obj.find( tg => tg["name-kr"] === targetName);
+            let profile = obj.find( obj => obj["name-kr"] === targetName);
             console.log(profile);
             modal.style.display = 'block';
             document.querySelector('body').style.overflow = 'hidden';
             makeProfile(profile);
         }
+
+        if(e.target.id === 'viewAll') {
+            makeCard(obj);
+            document.querySelector('form select').selectedIndex = 0;
+        }
     });
-    //makeTeam(obj);
 })
 .catch(() => {
     console.log('error occured!');
@@ -45,7 +54,6 @@ let pAddress = document.querySelector('.profile-dsc .address');
 
 // // 명함 카드 생성
 function makeCard(obj){
-    // obj["name-eng"];
     dbody.innerHTML = '';
     for (let i = 0; i < obj.length; i++) {
         let cardobj = document.createElement('div');
@@ -57,7 +65,7 @@ function makeCard(obj){
 }
 
 // function makeTeam(obj){
-//     let teamList = obj.filter( tg => tg["team"] === teamName);
+//     let teamList = obj.filter( obj => obj["team"] === teamName);
 //     for (let i = 0; i < teamList; i++){
 //         console.log('right');
 //     }
@@ -67,7 +75,7 @@ function makeCard(obj){
 
 function makeProfile(profile){
     if(profile["photo"] === ''){
-        pImg.src = `https://via.placeholder.com/150x200`;
+        pImg.src = `photo/profile-default.jpg`;
     } else {
         pImg.src = `photo/${profile["photo"]}`;
     }
@@ -80,9 +88,9 @@ function makeProfile(profile){
     pMail.innerHTML = `e-mail: <a href="mailto:${profile["info"][0]["email"]}">${profile["info"][0]["email"]}</a>`;
     pAddress.innerText = `주소: ${profile["info"][0]["address"]}`;
     //console.log(Object.keys(profile).length);
-    Object.keys(profile).forEach(function(k){
-        console.log('키값 : '+k + ', 데이터값 : ' + profile[k]);
-    });
+    // Object.keys(profile).forEach(function(k){
+    //     console.log('키값 : '+k + ', 데이터값 : ' + profile[k]);
+    // });
 }
 
 modalCloseBtn.addEventListener('click', () => {
