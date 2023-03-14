@@ -1,0 +1,267 @@
+[
+    {
+        "name-eng" : "choi-ch",
+        "name-kr" : "최초하",
+        "photo" : "choi-ch.jpg",
+        "team": "UI DEV", 
+        "time": "08:30~05:30",
+        "startdate": "20xx.xx.xx", 
+        "info" : [
+            { 
+                "phone": "010-0000-0000", 
+                "email": "abcd@sketchbook.kr", 
+                "address": "경기도 광명시 어쩌고~"
+            } 
+        ],
+        "color": "#d52cff"
+    },
+    {
+        "name-eng" : "kang-hs",
+        "name-kr" : "강혜선",
+        "photo" : "kang-hs.jpg",
+        "team": "UI DEV", 
+        "time": "09:30~06:30",
+        "startdate": "20xx.xx.xx", 
+        "info" : [
+            { 
+                "phone": "010-0000-0000", 
+                "email": "abcd@sketchbook.kr", 
+                "address": "경기도 부천시 어쩌고~"
+            } 
+        ],
+        "color": "#ffafa2"
+    },
+    {
+        "name-eng" : "kang-mj",
+        "name-kr" : "강민주",
+        "photo" : "kang-mj.jpg",
+        "team": "UI DEV", 
+        "time": "08:30~05:30",
+        "startdate": "20xx.xx.xx", 
+        "info" : [
+            { 
+                "phone": "010-0000-0000", 
+                "email": "abcd@sketchbook.kr", 
+                "address": "서울 어쩌고~"
+            } 
+        ],
+        "color": "#88c8f5"
+    },
+    {
+        "name-eng" : "lee-mk",
+        "name-kr" : "이민경",
+        "photo" : "lee-mk.jpg",
+        "team": "UI DEV", 
+        "time": "09:30~06:30",
+        "startdate": "2020.07.??", 
+        "info" : [
+            { 
+                "phone": "010-9164-6248", 
+                "email": "glee@sketchbook.kr", 
+                "address": "서울시 서대문구 통일로 339"
+            } 
+        ],
+        "color": "#9a9a9a"
+    },
+    {
+        "name-eng" : "lee-nr",
+        "name-kr" : "이나라",
+        "photo" : "lee-nr.png",
+        "team": "UI DEV", 
+        "time": "08:00~05:00",
+        "startdate": "20xx.xx.xx", 
+        "info" : [
+            { 
+                "phone": "010-0000-0000", 
+                "email": "abcd@sketchbook.kr", 
+                "address": "서울 어쩌고~"
+            } 
+        ],
+        "color": "#dfdeff"
+    },
+    {
+        "name-eng" : "park-sj",
+        "name-kr" : "박수진",
+        "photo" : "park-sj.jpg",
+        "team": "UI DEV", 
+        "time": "09:30~06:30",
+        "startdate": "20xx.xx.xx", 
+        "info" : [
+            { 
+                "phone": "010-0000-0000", 
+                "email": "abcd@sketchbook.kr", 
+                "address": "서울 어쩌고~"
+            } 
+        ],
+        "color": "#ffc000"
+    },
+    {
+        "name-eng" : "han-sh",
+        "name-kr" : "한세희",
+        "photo" : "",
+        "team": "DESIGN", 
+        "time": "09:30~06:30",
+        "startdate": "20xx.xx.xx", 
+        "info" : [
+            { 
+                "phone": "010-0000-0000", 
+                "email": "abcd@sketchbook.kr", 
+                "address": "서울 어쩌고~"
+            } 
+        ],
+        "color": "#ff4f80"
+    }
+    ,
+    {
+        "name-eng" : "jeon-ea",
+        "name-kr" : "전이안",
+        "photo" : "",
+        "team": "DESIGN", 
+        "time": "08:00~05:00",
+        "startdate": "20xx.xx.xx", 
+        "info" : [
+            { 
+                "phone": "010-0000-0000", 
+                "email": "abcd@sketchbook.kr", 
+                "address": "서울 어쩌고~"
+            } 
+        ],
+        "color": "#f1d6ff"
+    }
+    ,
+    {
+        "name-eng" : "kim-sb",
+        "name-kr" : "김수빈",
+        "photo" : "",
+        "team": "DESIGN", 
+        "time": "08:00~05:00",
+        "startdate": "20xx.xx.xx", 
+        "info" : [
+            { 
+                "phone": "010-0000-0000", 
+                "email": "abcd@sketchbook.kr", 
+                "address": "서울 어쩌고~"
+            } 
+        ],
+        "color": "#48b7fc"
+    }
+    ,
+    {
+        "name-eng" : "jeon-ej",
+        "name-kr" : "전은정",
+        "photo" : "",
+        "team": "DESIGN", 
+        "time": "09:30~06:30",
+        "startdate": "20xx.xx.xx", 
+        "info" : [
+            { 
+                "phone": "010-0000-0000", 
+                "email": "abcd@sketchbook.kr", 
+                "address": "서울 어쩌고~"
+            } 
+        ],
+        "color": "#574fff"
+    }
+    ,
+    {
+        "name-eng" : "kim-sh",
+        "name-kr" : "김상훈",
+        "photo" : "",
+        "team": "Communication", 
+        "time": "09:30~06:30",
+        "startdate": "20xx.xx.xx", 
+        "info" : [
+            { 
+                "phone": "010-0000-0000", 
+                "email": "abcd@sketchbook.kr", 
+                "address": "서울 어쩌고~"
+            } 
+        ],
+        "color": "#ddd"
+    }
+    ,
+    {
+        "name-eng" : "kang-hk",
+        "name-kr" : "강현경",
+        "photo" : "",
+        "team": "Communication", 
+        "time": "09:30~06:30",
+        "startdate": "20xx.xx.xx", 
+        "info" : [
+            { 
+                "phone": "010-0000-0000", 
+                "email": "abcd@sketchbook.kr", 
+                "address": "서울 어쩌고~"
+            } 
+        ],
+        "color": "#ff9271"
+    }
+    ,
+    {
+        "name-eng" : "kang-ym",
+        "name-kr" : "강유미",
+        "photo" : "",
+        "team": "Communication", 
+        "time": "09:30~06:30",
+        "startdate": "20xx.xx.xx", 
+        "info" : [
+            { 
+                "phone": "010-0000-0000", 
+                "email": "abcd@sketchbook.kr", 
+                "address": "서울 어쩌고~"
+            } 
+        ],
+        "color": "#3560ff"
+    }
+    ,
+    {
+        "name-eng" : "park-kj",
+        "name-kr" : "박경주",
+        "photo" : "",
+        "team": "UI DEV", 
+        "time": "09:00~06:00",
+        "startdate": "20xx.xx.xx", 
+        "info" : [
+            { 
+                "phone": "010-0000-0000", 
+                "email": "abcd@sketchbook.kr", 
+                "address": "서울 어쩌고~"
+            } 
+        ],
+        "color": "#ae90ea"
+    }
+    ,
+    {
+        "name-eng" : "hwang-kh",
+        "name-kr" : "황경현",
+        "photo" : "",
+        "team": "Development", 
+        "time": "09:00~06:00",
+        "startdate": "20xx.xx.xx", 
+        "info" : [
+            { 
+                "phone": "010-0000-0000", 
+                "email": "abcd@sketchbook.kr", 
+                "address": "서울 어쩌고~"
+            } 
+        ],
+        "color": "#f5f5dc"
+    }
+    ,
+    {
+        "name-eng" : "song-ym",
+        "name-kr" : "송영민",
+        "photo" : "",
+        "team": "Development", 
+        "time": "09:00~06:00",
+        "startdate": "20xx.xx.xx", 
+        "info" : [
+            { 
+                "phone": "010-0000-0000", 
+                "email": "abcd@sketchbook.kr", 
+                "address": "서울 어쩌고~"
+            } 
+        ],
+        "color": "#fff"
+    }
+]
