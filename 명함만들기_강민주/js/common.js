@@ -5,20 +5,22 @@ fetch("./list.json")
 .then((obj) => {
 
     makeCard(obj);
+    let sortTeam;
     document.querySelector('form').addEventListener('submit', e => {
         e.preventDefault();
         let teamName = e.target.selectTeam.value;
-        let sortTeam = obj.filter( obj => obj["team"] === teamName);
         if(teamName === ''){
-            return false;
+            sortTeam = obj;
+            document.querySelector('form select').selectedIndex = 0;
         } else {
-            makeCard(sortTeam);
+            sortTeam = obj.filter( obj => obj["team"] === teamName);
         }
+        makeCard(sortTeam);
+        return sortTeam;
     });
 
     document.addEventListener('click', e => {
         if(e.target.className === 'card'){
-            //console.log(obj);
             let targetName = e.target.innerHTML;
             let profile = obj.find( obj => obj["name-kr"] === targetName);
             console.log(profile);
@@ -26,10 +28,18 @@ fetch("./list.json")
             document.querySelector('body').style.overflow = 'hidden';
             makeProfile(profile);
         }
-
         if(e.target.id === 'viewAll') {
             makeCard(obj);
             document.querySelector('form select').selectedIndex = 0;
+            sortTeam = obj;
+        }
+        if(e.target.id === 'sortByName') {
+            sortName(sortTeam);
+            makeCard(sortTeam);
+        }
+        if(e.target.id === 'sortByTime') {
+            sortTime(sortTeam);
+            makeCard(sortTeam);
         }
     });
 })
@@ -51,6 +61,7 @@ let pDate = document.querySelector('.profile-dsc .startdate');
 let pPhone = document.querySelector('.profile-info .phone');
 let pMail = document.querySelector('.profile-dsc .email');
 let pAddress = document.querySelector('.profile-dsc .address');
+let nameObj;
 
 // // 명함 카드 생성
 function makeCard(obj){
@@ -64,12 +75,23 @@ function makeCard(obj){
     }
 }
 
-// function makeTeam(obj){
-//     let teamList = obj.filter( obj => obj["team"] === teamName);
-//     for (let i = 0; i < teamList; i++){
-//         console.log('right');
-//     }
-// }
+// 이름 정렬
+function sortName(obj){
+    nameObj = obj.sort((a, b) => {
+        if (a["name-kr"] < b["name-kr"]) {
+            return -1;
+        }
+    });
+}
+// 출근 시간 정렬
+function sortTime(obj){
+    timeObj = obj.sort((a, b) => {
+        if (a["time"] < b["time"]) {
+            return -1;
+        }
+    });
+    console.log(timeObj);
+}
 
 // 모달
 
