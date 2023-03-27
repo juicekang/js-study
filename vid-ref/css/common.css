@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+/* reset */
+* {box-sizing:border-box;}
+html{font-size: 18px;}
+body{font-family:'Poppins',Pretendard,sans-serif !important; word-wrap:break-word;color:#111;letter-spacing:-0.04em;position: relative;min-height: 100vh;}
+a,button,input,textarea{transition:border-color .4s,background .4s,color .4s,opacity .4s,transform .4s}
+a{text-decoration: none !important; color:inherit}
+a:hover,a:focus,a:active{color:inherit}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,label{margin:0;padding:0}
+button{border:0;background: none;}
+li{list-style:none}
+address,i{margin:0;font-style:normal}
+label,button,[role=button]{cursor:pointer}
+table{width:100%}
+img,video,iframe{max-width:100%}
+hr{border-top-color: #e5e5e5}
+
+#set-height {
+  display: block;
+}
+#v0 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+p font-family helvetica {
+  font-size: 24px;
+}

@@ -1,3 +1,5 @@
+'use strict';
+
 const carrotGame = document.querySelector('#carrotGame');
 const btnStart = document.querySelector('.btn-play');
 const timerSec = document.querySelector('.game-timer span');
