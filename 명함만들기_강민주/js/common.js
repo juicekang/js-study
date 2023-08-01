@@ -23,12 +23,14 @@ fetch("./list.json")
     document.addEventListener('click', e => {
         if(e.target.className === 'card'){
             let targetName = e.target.innerHTML;
-            profile = obj.find( obj => obj["name-kr"] === targetName);
+            //profile = obj.find( obj => obj["name-kr"] === targetName);
             // console.log(profile);
+            profile = obj.find(obj => obj["memberId"] === e.target.id);
             modal.style.display = 'block';
             document.querySelector('body').style.overflow = 'hidden';
             makeProfile(profile);
             saveImage(profile);
+            console.log(profile);
         }
         if(e.target.id === 'viewAll') {
             makeCard(obj);
@@ -79,12 +81,16 @@ let dWrap = document.querySelector('#wrap');
 function makeCard(obj){
     dbody.innerHTML = '';
     for (let i = 0; i < obj.length; i++) {
+        obj[i].memberId =  `member${i}`;
         let cardobj = document.createElement('div');
         cardobj.setAttribute('class', 'card');
+        cardobj.id = obj[i].memberId;
         cardobj.innerHTML = obj[i]["name-kr"];
         cardobj.style.backgroundColor = obj[i].color;
         dbody.appendChild(cardobj);
+        
     }
+    console.log(obj);
 }
 
 // 이름 정렬
@@ -115,7 +121,6 @@ function teamOption(obj) {
         let opt = document.createElement('option');
         opt.setAttribute('value', teamOption[i]);
         opt.innerHTML = teamOption[i];
-        console.log(opt);
         document.querySelector('#selectTeam').appendChild(opt);
     }
 }
@@ -189,9 +194,9 @@ function saveImage(profile) {
     let imgAspect = profileImage.height / profileImage.width;
     profileImage.addEventListener("load", (e) => {
         ctx.drawImage(profileImage, 20, 30, 150, 200);
-        if (imgAspect > divAspect) {
-            console.log(divAspect);
-        }
+        // if (imgAspect > divAspect) {
+        //     console.log(divAspect);
+        // }
     });
     
 
